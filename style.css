@@ -1,0 +1,186 @@
+.robot{
+    border: 2px solid rgb(255, 255, 255);
+    height: 500px;
+    position: fixed;
+    width: 500px;
+    background-color: white ;
+}.face{
+    position: fixed;
+    height: 100px;
+    width: 180px;
+    border: 5px solid white;
+    background-color: red;
+    border-radius: 100px 100px 15px 15px;
+    margin-top: 50px;
+    margin-left: 130px;
+    /* animation: fc 5s infinite; */
+    transform-origin: top;
+}
+.eyes .i{
+    position: fixed;
+    border: 3px solid aliceblue;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    /* animation: is 5s infinite ; */
+}
+
+.eyes .i:first-child{
+    margin-top: 50px;
+    margin-left: 130px;
+}
+.eyes .i:last-child{
+    margin-top: 50px;
+    margin-left: 38px;
+}
+.horn .atn{
+    position: fixed;
+    height: 60px;
+    width: 6px;
+    background-color: red;
+    border-radius: 100px 100px 0 0;
+    z-index: -1;
+    margin-top: -30px;
+    /* animation: hn 5s infinite; */
+    transform-origin: bottom;
+}
+
+.horn .atn:first-child{
+    margin-left: 25px;
+    transform: rotate(-20deg);
+}
+.horn .atn:last-child{
+    margin-left: 140px;
+    transform: rotate(20deg);
+}
+
+.body
+{
+    position: fixed;
+    height: 160px;
+    width: 180px;
+    border: 5px solid white;
+    background-color: red;
+    border-radius: 10px 10px 15px 15px;
+    margin-top: 155px;
+    margin-left: 130px;
+    transform-origin: top;
+    /* animation: bdy 5s infinite; */
+}
+.leg .l
+{
+    position: fixed;
+    height: 110px;
+    width: 30px;
+    border: 5px solid white;
+    background-color: red;
+    border-radius: 20px 10px 20px 20px;
+    z-index: -1;
+    margin-top: 290px;
+    transform-origin: top;
+    /* animation: lg 5s infinite; */
+}
+.leg .l:first-child
+{
+    margin-left: 165px;
+    /* animation: lg 5s infinite; */
+}
+.leg .l:last-child
+{ 
+    margin-left: 244px;
+    /* animation: lgs 5s infinite; */
+}
+.hand .h{
+    position: fixed;
+    border: 3px solid white;
+    height: 110px;
+    width: 30px;
+    background-color: red;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 20px;
+    transform-origin: top;
+    /* animation: hnd 5s infinite; */
+}
+.hand .h:first-child{
+    margin-left: -35px; 
+    /* animation: hnd 5s infinite; */
+}
+.hand .h:last-child{   
+    margin-left: 182px;
+    /* animation: hnds 5s infinite;  */
+}
+@keyframes fc{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(-10deg);}
+    0%{transform: rotate(10deg);}
+}
+@keyframes is {
+    0%{transform: scale(0);}
+    50%{transform: scale(2);}
+    100%{transform: scale(-2);}
+}
+@keyframes hn{
+    0%{transform: rotate(0); }
+    50%{transform: rotate(-40deg);}
+    100%{transform: rotate(40deg);}
+}
+@keyframes bdy{
+    0% {transform: 0deg;}
+    50% {transform: rotate(6deg);}
+    100%{transform: rotate(-12deg);}
+}
+@keyframes lg{
+    0% {transform: 0deg;}
+    50% {transform: rotate(60deg);}
+    100%{transform: rotate(-60deg);}
+}
+@keyframes lgs{
+    0% {transform: 0deg;}
+    50% {transform: rotate(-30deg);}
+    100%{transform: rotate(30deg);}
+}
+@keyframes hnd{
+    
+    0% {transform: 0deg;}
+    50% {transform: rotate(90deg);}
+    100%{transform: rotate(-90deg);}
+}
+@keyframes hnds{
+    
+    0% {transform: 0deg;}
+    50% {transform: rotate(-90deg);}
+    100%{transform: rotate(90deg);}
+}
+.robot:hover .eyes .i , .robot:hover .face , .robot:hover .horn .atn,
+.robot:hover .body ,
+.robot:hover .leg .l:first-child , .robot:hover .leg .l:last-child
+.robot:hover .hand .h , .robot:hover .hand .h:first-child
+{
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.hand .h {
+    transform-origin: top;
+}
+
+.leg .l {
+    transform-origin: top;  
+}
+.robot:hover .eyes .i{animation-name: is;}
+.robot:hover .face{animation-name: fc;}
+.robot:hover .horn .atn{animation-name: hn;}
+.robot:hover .body{animation-name: bdy;}
+
+.robot:hover .leg .l {
+    animation: lg 2s infinite;
+}
+
+.robot:hover .hand .h {
+  
+    animation: hnd 2s infinite;
+}
+
+
+
+
